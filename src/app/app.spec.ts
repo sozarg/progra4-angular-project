@@ -1,15 +1,17 @@
 import { TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { App } from './app';
+import { Navbar } from './componentes/navbar/navbar';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        FormsModule
+        RouterModule.forRoot([])
       ],
       declarations: [
-        App
+        App,
+        Navbar
       ],
     }).compileComponents();
   });
@@ -24,6 +26,6 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Ingreso de edades');
+    expect(compiled.querySelector('a')?.textContent).toContain('Bienvenido');
   });
 });

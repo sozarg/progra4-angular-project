@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: #111827;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1f2937;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 700;
+}

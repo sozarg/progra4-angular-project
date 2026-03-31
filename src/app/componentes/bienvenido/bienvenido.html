@@ -1,1 +1,29 @@
-<h1>esto es un bienvenido</h1>
+<main class="contenedor">
+  <h1>Bienvenido</h1>
+  <p>Usuario logueado: {{ nombreUsuarioLogueado }}</p>
+
+  <div class="campo">
+    <label for="edadUno">Edad uno</label>
+    <input id="edadUno" type="number" [(ngModel)]="edadUno">
+  </div>
+
+  <div class="campo">
+    <label for="edadDos">Edad dos</label>
+    <input id="edadDos" type="number" [(ngModel)]="edadDos">
+  </div>
+
+  <div class="campo">
+    <label for="suma">Suma</label>
+    <input id="suma" type="number" [(ngModel)]="suma" readonly>
+  </div>
+
+  <div class="campo">
+    <label for="promedio">Promedio</label>
+    <input id="promedio" type="number" [(ngModel)]="promedio" readonly>
+  </div>
+
+  <div class="botones">
+    <button type="button" (click)="calcular()">Calcular</button>
+    <button type="button" (click)="limpiar()">Limpiar cuadros de textos</button>
+  </div>
+</main>

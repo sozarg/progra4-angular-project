@@ -1,1 +1,19 @@
-<h1>esto es un login</h1>
+<main class="contenedor">
+  <h1>Login</h1>
+
+  <div class="campo">
+    <label for="nombreLogin">Nombre</label>
+    <input id="nombreLogin" type="text" [(ngModel)]="usuario.nombre">
+  </div>
+
+  <div class="campo">
+    <label for="claveLogin">Clave</label>
+    <input id="claveLogin" type="password" [(ngModel)]="usuario.clave">
+  </div>
+
+  <div class="botones">
+    <button type="button" (click)="ingresar()">Ingresar</button>
+  </div>
+
+  <p class="mensaje">{{ mensaje }}</p>
+</main>
